@@ -1,6 +1,8 @@
 /*
 !.gitignore
 !README.md
+!package.json
+!webpack.mix.js
 !Sef.fig
 !wp-content/
 wp-content/*
