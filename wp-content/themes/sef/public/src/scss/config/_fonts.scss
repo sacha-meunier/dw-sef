@@ -1,0 +1,37 @@
+// Font weight
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+// Font sizes
+$fs-14: 0.875rem; //14px
+$fs-16: 1rem; //16px
+$fs-18: 1.125rem; //18px
+$fs-20: 1.25rem; //20px
+$fs-24: 1.5rem; //24px
+$fs-30: 1.875rem; //30px
+$fs-36: 2.25rem; //36px
+$fs-48: 3rem; //48px
+$fs-60: 3.75rem; //60px
+$fs-80: 5rem; //80px
+
+// Font line-height
+$lh-20: 1.25rem;
+$lh-24: 1.5rem;
+$lh-28: 1.75rem;
+$lh-32: 2rem;
+$lh-36: 2.25rem;
+$lh-40: 2.5rem;
+$lh-48: 3rem;
+$lh-60: 3.75rem;
+$lh-80: 5rem;
+
+// Font letter spacing
+$ls-02: .2px;
+
+:root {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  font-weight: $fw-regular;
+  font-style: normal;
+}
