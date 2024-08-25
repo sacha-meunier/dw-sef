@@ -11,3 +11,4 @@ wp-content/themes/*
 !wp-content/themes/sef/
 !wp-content/themes/sef/*
 /wp-content/themes/sef/public/content/
+wp-content/themes/sef/.DS_Store
