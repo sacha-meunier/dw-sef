@@ -12,4 +12,6 @@ function sef_enqueue_assets(): void
     // Include JavaScript file
     wp_enqueue_script( 'sef-main-script', $dist_path . 'js/main.js', array(), '1.0.0', true );
 }
+
+// Action to add styles and scripts to wp_head
 add_action( 'wp_enqueue_scripts', 'sef_enqueue_assets' );
