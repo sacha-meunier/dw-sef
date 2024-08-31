@@ -1,0 +1,36 @@
+// **********************************************************
+// Padding variables
+// **********************************************************
+$padding-side-xs: 1.25rem; //20px
+$padding-side-s: 2.5rem; //40px
+$padding-side-m: 3.75rem; //60px
+$padding-side-l: 5rem; //80px
+$max-width: 1280px;
+
+// Adds padding left and right based on screen width.
+// **********************************************************
+// - @include padding-sides()
+// **********************************************************
+@mixin padding-sides {
+  padding-left: $padding-side-xs;
+  padding-right: $padding-side-xs;
+
+  @media (min-width: 760px) {
+    padding-left: $padding-side-s;
+    padding-right: $padding-side-s;
+  }
+
+  @media (min-width: 920px) {
+    padding-left: $padding-side-l;
+    padding-right: $padding-side-l;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+  }
+}
+
