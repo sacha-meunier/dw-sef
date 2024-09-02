@@ -1,7 +1,9 @@
 // load reset
 @import "reset";
 
-// load config & vars
+// **********************************************************
+// Load configs & vars
+// **********************************************************
 @import "config/elements";
 @import "config/animations";
 @import "config/fonts";
@@ -11,13 +13,27 @@
 @import "config/breakpoints";
 
 
-// load mixins & vars
+// **********************************************************
+// Load helpers
+// **********************************************************
 @import "helpers";
 
-// load pages
-/*
-@import "pages/name";
-*/
+
+// **********************************************************
+// Load Pages
+// **********************************************************
+
+// Home page
+@import "pages/home/home";
+@import "pages/home/hero";
+@import "pages/home/support";
+
+// FAQ page
+@import "pages/faq/faq";
+@import "pages/faq/info";
+@import "pages/faq/list";
+
+
 
 // load components
 /*

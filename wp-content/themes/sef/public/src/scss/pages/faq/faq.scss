@@ -1,0 +1,10 @@
+@import "../../config/paddings";
+
+.faq {
+  @include padding-sides();
+  @include margin-vertical();
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}

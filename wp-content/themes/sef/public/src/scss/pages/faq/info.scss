@@ -1,0 +1,12 @@
+@import "../../config/fonts";
+.faq {
+
+  &__title {
+    @include h1();
+    font-weight: $fw-black;
+  }
+
+  &__copy {
+    @include paragraph();
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../config/colors";
+@import "../../config/fonts";
+@import "../../config/elements";
+@import "../../config/animations";
+@import "../../config/spacings";
+
+.faq {
+  --padding-horizontal: 20px;
+  --padding-vertical: 10px;
+  --duration: 500ms;
+  --max-height: 25rem;
+  --icon-width: 10px;
+  --icon-offset: 6px;
+}
+
+@media (min-width: 760px) {
+  .faq {
+    --padding-horizontal: 40px;
+    --padding-vertical: 20px;
+    --max-height: 30rem;
+  }
+}
+
+.faq {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+  }
+
+  &__item {
+    list-style: none;
+    width: 100%;
+    background-color: $clr-vanilla;
+    border-radius: $radius-xl;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + .faq__label + .faq__answer {
+    max-height: var(--max-height);
+    padding: 0 var(--padding-horizontal) var(--padding-vertical) calc(var(--padding-horizontal) + var(--icon-width));
+  }
+
+  &__input:checked + .faq__label::before {
+    content: '-';
+  }
+
+  &__label {
+    @include paragraph();
+    font-weight: $fw-bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: var(--padding-vertical) var(--padding-horizontal) var(--padding-vertical) calc(var(--padding-horizontal) + var(--icon-width));
+    margin-left: var(--padding-horizontal);
+    cursor: pointer;
+  }
+
+  &__label::before {
+    @include h3();
+    position: absolute;
+    content: '+';
+    left: 0;
+    top: calc(var(--padding-vertical) - var(--icon-offset));
+  }
+
+  &__answer {
+    padding: 0 var(--padding-horizontal) 0 calc(var(--padding-horizontal) + var(--icon-width));
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--duration), padding var(--duration);
+  }
+
+  &__text {
+    @include paragraph-small();
+    margin-left: var(--padding-horizontal);
+  }
+}
