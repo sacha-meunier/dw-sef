@@ -7,6 +7,5 @@
         </ul>
     </section>
 </footer>
-</main>
 </body>
 </html>
