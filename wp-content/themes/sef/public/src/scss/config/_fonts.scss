@@ -1,3 +1,7 @@
+// **********************************************************
+// Font variables
+// **********************************************************
+
 // Font weight
 $fw-regular: 400;
 $fw-medium: 500;
@@ -17,6 +21,7 @@ $fs-60: 3.75rem; //60px
 $fs-80: 5rem; //80px
 
 // Font line-height
+$line-height-factor: 1.8;
 $lh-20: 1.25rem;
 $lh-24: 1.5rem;
 $lh-28: 1.75rem;
@@ -34,4 +39,84 @@ $ls-02: .2px;
   font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   font-weight: $fw-regular;
   font-style: normal;
+}
+
+// Mixins for default headings
+// **********************************************************
+// - @include h1()
+// **********************************************************
+
+@mixin h1 {
+  font-size: $fs-24;
+  line-height: ($fs-24) * $line-height-factor;
+
+  @media (min-width: 760px) {
+    font-size: $fs-36;
+    line-height: ($fs-36) * $line-height-factor;
+  }
+
+  @media (min-width: 920px) {
+    font-size: $fs-60;
+    line-height: ($fs-60) * $line-height-factor;
+  }
+}
+
+@mixin h2 {
+  font-size: $fs-20;
+  line-height: ($fs-20) * $line-height-factor;
+
+  @media (min-width: 760px) {
+    font-size: $fs-24;
+    line-height: ($fs-24) * $line-height-factor;
+  }
+
+  @media (min-width: 920px) {
+    font-size: $fs-48;
+    line-height: ($fs-48) * $line-height-factor;
+  }
+}
+
+@mixin h3 {
+  font-size: $fs-18;
+  line-height: ($fs-18) * $line-height-factor;
+
+  @media (min-width: 760px) {
+    font-size: $fs-20;
+    line-height: ($fs-20) * $line-height-factor;
+  }
+
+  @media (min-width: 920px) {
+    font-size: $fs-24;
+    line-height: ($fs-24) * $line-height-factor;
+  }
+}
+
+@mixin paragraph {
+  font-size: $fs-16;
+  line-height: ($fs-16) * $line-height-factor;
+
+  @media (min-width: 760px) {
+    font-size: $fs-18;
+    line-height: ($fs-18) * $line-height-factor;
+  }
+
+  @media (min-width: 920px) {
+    font-size: $fs-20;
+    line-height: ($fs-20) * $line-height-factor;
+  }
+}
+
+@mixin paragraph-small {
+  font-size: $fs-14;
+  line-height: ($fs-14) * $line-height-factor;
+
+  @media (min-width: 760px) {
+    font-size: $fs-16;
+    line-height: ($fs-16) * $line-height-factor;
+  }
+
+  @media (min-width: 920px) {
+    font-size: $fs-18;
+    line-height: ($fs-18) * $line-height-factor;
+  }
 }
