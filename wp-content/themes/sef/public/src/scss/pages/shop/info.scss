@@ -1,8 +1,6 @@
 @import "../../config/fonts";
 
 .shop {
-  &__info {
-  }
 
   &__title {
     @include h1();
