@@ -19,7 +19,7 @@
     flex-wrap: wrap-reverse;
     align-items: stretch;
 
-    border-radius: $radius-xxl;
+    border-radius: $radius-xl;
     background-color: $clr-bg-pink;
 
     &--green {
@@ -99,14 +99,7 @@
   }
 
   .card__phone {
-    @include h3();
-    text-decoration: none;
-    color: $clr-white;
-    background-color: $clr-black;
-    padding: 10px 20px;
-    border-radius: $radius-xl;
-    text-align: center;
-    flex: 0;
+    //add before with phone icon
   }
 
   .card__image-container {

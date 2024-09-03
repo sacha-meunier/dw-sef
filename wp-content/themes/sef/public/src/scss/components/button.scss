@@ -1,0 +1,20 @@
+@import "../config/colors";
+@import "../config/fonts";
+@import "../config/elements";
+@import "../config/animations";
+@import "../config/spacings";
+@import "../config/paddings";
+
+.button {
+  @include h3();
+  font-weight: $fw-medium;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: $radius-xl;
+  color: $clr-white;
+  background-color: $clr-black;
+
+  padding: 10px 20px;
+  flex: 0;
+}

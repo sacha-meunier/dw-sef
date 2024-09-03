@@ -39,7 +39,7 @@
 
                     <div class="card__footer">
                         <p class="card__address"><?= get_sub_field('shop_address'); ?></p>
-                        <a class="card__phone" href="tel:<?= get_sub_field('shop_phone') ?>"><?= get_sub_field('shop_phone'); ?></a>
+                        <a class="button card__phone" href="tel:<?= get_sub_field('shop_phone') ?>"><?= get_sub_field('shop_phone'); ?></a>
                     </div>
                 </div>
 
