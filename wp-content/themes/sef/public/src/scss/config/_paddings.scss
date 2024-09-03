@@ -57,3 +57,35 @@ $max-width: 1280px;
     margin-bottom: 10rem;
   }
 }
+
+// Adds padding based on screen width.
+// **********************************************************
+// - @include padding-card()
+// **********************************************************
+@mixin padding-card {
+  padding: $padding-side-xs;
+
+  @media (min-width: 760px) {
+    padding: $padding-side-s;
+  }
+
+  @media (min-width: 920px) {
+    padding: $padding-side-m;
+  }
+}
+
+// Adds gap based on screen width.
+// **********************************************************
+// - @include gap-card()
+// **********************************************************
+@mixin gap-card {
+  gap: $padding-side-xs;
+
+  @media (min-width: 760px) {
+    gap: $padding-side-s;
+  }
+
+  @media (min-width: 920px) {
+    gap: $padding-side-l;
+  }
+}
