@@ -7,7 +7,7 @@
             <h1 class="contact__title">
                 <?= get_sub_field('contact_info_title'); ?>
             </h1>
-            <p class="contact_copy">
+            <p class="contact__copy">
                 <?= get_sub_field('contact_info_copy'); ?>
             </p>
         </section>

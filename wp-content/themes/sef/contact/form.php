@@ -8,12 +8,12 @@ unset($_SESSION['form_errors']);
         the_row();
         ?>
 
-        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="contact__form">
+        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="form">
             <input type="hidden" name="action" value="contact_form">
-            <fieldset>
+            <fieldset class="form__container">
                 <legend class="sro">Formulaire de contact</legend>
 
-                <div class="form__row form__row--double">
+                <div class="form__row">
                     <div class="form__field">
                         <label class="form__label" for="lastname"><?= get_sub_field('form_lastname_label'); ?></label>
                         <input class="form__input" type="text" id="lastname" name="lastname" placeholder="<?= get_sub_field('form_lastname_placeholder'); ?>">

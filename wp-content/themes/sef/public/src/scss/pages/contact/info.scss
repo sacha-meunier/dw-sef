@@ -1,0 +1,14 @@
+@import "../../config/fonts";
+
+.contact {
+
+  &__title {
+    @include h1();
+    font-weight: $fw-bold;
+  }
+
+  &__copy {
+    @include paragraph();
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../config/paddings";
+
+.contact {
+  @include padding-sides();
+  @include margin-vertical();
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  &__switcher > * {
+    flex-grow: 1;
+  }
+
+  .contact__switcher > *:first-child {
+    flex-grow: 1;
+  }
+
+  .contact__switcher > *:last-child {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+}
+
+@media (min-width: 760px) {
+  .contact {
+    gap: 4rem;
+
+    &__switcher {
+      gap: 6rem;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .contact {
+    gap: 6rem;
+  }
+}
