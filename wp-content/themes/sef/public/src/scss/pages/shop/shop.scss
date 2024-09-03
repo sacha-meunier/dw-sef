@@ -1,0 +1,170 @@
+@import "../../config/colors";
+@import "../../config/fonts";
+@import "../../config/elements";
+@import "../../config/animations";
+@import "../../config/spacings";
+@import "../../config/paddings";
+
+.shop {
+
+  &__container > * + * {
+    margin-block-start: 2em;
+  }
+
+  &__card {
+    @include padding-card();
+    @include gap-card();
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: stretch;
+
+    border-radius: $radius-xxl;
+    background-color: $clr-bg-pink;
+
+    &--green {
+      background-color: $clr-bg-green;
+    }
+
+    &--orange {
+      background-color: $clr-bg-orange;
+    }
+
+    &--pink {
+      background-color: $clr-bg-pink;
+    }
+
+    &--blue {
+      background-color: $clr-bg-blue;
+    }
+
+    &--red {
+      background-color: $clr-bg-red;
+    }
+
+    &--vanilla {
+      background-color: $clr-vanilla;
+    }
+  }
+
+  &__card > * {
+    flex-grow: 1;
+    flex-basis: calc((30rem - 100%) * 999);
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-side-xs;
+  }
+
+  .card__header {
+
+  }
+
+  .card__title {
+    @include h2();
+    font-weight: $fw-bold;
+  }
+
+  .card__description {
+    @include paragraph();
+  }
+
+  .card__details {
+
+  }
+
+  .card__subtext {
+    @include paragraph();
+    font-weight: $fw-bold;
+  }
+
+  .card__days-list {
+
+  }
+
+  .card__day {
+    @include paragraph();
+  }
+
+  .card__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card__address {
+    @include paragraph();
+  }
+
+  .card__phone {
+    @include h3();
+    text-decoration: none;
+    color: $clr-white;
+    background-color: $clr-black;
+    padding: 10px 20px;
+    border-radius: $radius-xl;
+    text-align: center;
+    flex: 0;
+  }
+
+  .card__image-container {
+    display: flex;
+    flex-grow: 1;
+    min-height: 200px;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: $clr-vanilla;
+
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: $radius-xl;
+  }
+}
+
+
+@media (min-width: 560px) {
+  .shop {
+    &__card--reverse {
+      .card__content {
+        order: 2;
+      }
+
+      .card__image-container {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .shop {
+
+    &__container > * + * {
+      margin-block-start: 4em;
+    }
+
+    .card__content {
+      gap: $padding-side-s;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .shop {
+
+    &__container > * + * {
+      margin-block-start: 6em;
+    }
+
+    .card__content {
+      gap: $padding-side-m;
+    }
+
+  }
+}
