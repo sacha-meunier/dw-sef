@@ -1,0 +1,93 @@
+@import "../../config/fonts";
+@import "../../config/paddings";
+@import "../../config/elements";
+@import "../../config/colors";
+
+.hero {
+  @include padding-sides();
+  padding-bottom: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 3.125rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.875rem;
+  }
+
+  &__title {
+    @include h1();
+    font-weight: $fw-black;
+  }
+
+  &__copy {
+    @include paragraph();
+  }
+
+  &__image-container {
+    height: 18rem;
+    border-radius: 1.25rem;
+    background-color: $clr-bg-blue;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    text-align: center;
+  }
+
+  &__subtext {
+    @include paragraph-small();
+    max-width: 23rem;
+  }
+
+  &__link {
+    @include paragraph();
+    padding: 15px 25px;
+    width: fit-content;
+
+    font-weight: $fw-medium;
+    text-decoration: none;
+
+    border-radius: $radius-xxl;
+    background-color: $clr-black;
+    color: $clr-white;
+  }
+}
+
+@media (min-width: 760px) {
+  .hero {
+
+    &__content {
+      flex-direction: row;
+    }
+
+    &__text {
+      flex: 1;
+      text-align: center;
+    }
+
+    &__image-container {
+      flex: 1;
+      height: auto;
+    }
+  }
+}
