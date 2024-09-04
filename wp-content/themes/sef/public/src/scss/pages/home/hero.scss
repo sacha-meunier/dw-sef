@@ -5,6 +5,7 @@
 
 .hero {
   @include padding-sides();
+  @include padding-vertical();
   padding-bottom: 2.5rem;
 
   display: flex;

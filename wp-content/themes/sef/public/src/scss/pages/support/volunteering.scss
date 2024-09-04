@@ -7,53 +7,54 @@
 
 .support {
 
-  &__container > article + article {
-    margin-block-start: 2rem;
-  }
-
   &__subtitle {
     @include h2();
     font-weight: $fw-bold;
     margin-bottom: 1em;
   }
 
-  &__card {
-    @include padding-card();
+  &__volunteering {
     @include gap-card();
 
     display: flex;
     flex-direction: column;
     align-items: stretch;
 
-    border-radius: $radius-xl;
-    background-color: $clr-bg-pink;
-
-    &--green {
-      background-color: $clr-bg-green;
-    }
-
-    &--orange {
-      background-color: $clr-bg-orange;
-    }
-
-    &--pink {
+    .volunteering__card {
+      @include padding-card();
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-radius: $radius-xl;
       background-color: $clr-bg-pink;
     }
 
-    &--blue {
+    .volunteering__card--green {
+      background-color: $clr-bg-green;
+    }
+
+    .volunteering__card--orange {
+      background-color: $clr-bg-orange;
+    }
+
+    .volunteering__card--pink {
+      background-color: $clr-bg-pink;
+    }
+
+    .volunteering__card--blue {
       background-color: $clr-bg-blue;
     }
 
-    &--red {
+    .volunteering__card--red {
       background-color: $clr-bg-red;
     }
 
-    &--vanilla {
+    .volunteering__card--vanilla {
       background-color: $clr-vanilla;
     }
   }
 
-  &__card > * {
+  &__volunteering > * {
     flex-grow: 1;
   }
 
@@ -154,10 +155,6 @@
 @media (min-width: 760px) {
   .support {
 
-    &__subtitle {
-      margin-bottom: 2rem;
-    }
-
     &__container > article + article {
       margin-block-start: 4rem;
     }
@@ -174,10 +171,6 @@
 
 @media (min-width: 920px) {
   .support {
-
-    &__subtitle {
-      margin-bottom: 2rem;
-    }
 
     &__container > article + article {
       margin-block-start: 3rem;

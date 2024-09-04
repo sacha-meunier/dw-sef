@@ -4,11 +4,11 @@
         <?php
         $card_color = get_sub_field('support_volunteering_color');
 
-        $card_classes = 'support__card'
-            . ' support__card--' . $card_color;
+        $card_classes = 'volunteering__card'
+            . ' volunteering__card--' . $card_color;
         ?>
 
-        <article class="support__container">
+        <article class="support__volunteering">
 
             <h2 class="support__subtitle"><?= get_sub_field('support_volunteering_title'); ?></h2>
 
