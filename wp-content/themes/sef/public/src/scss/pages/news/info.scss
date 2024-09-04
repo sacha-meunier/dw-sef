@@ -1,0 +1,8 @@
+@import "../../config/fonts";
+.news {
+
+  &__title {
+    @include h1();
+    font-weight: $fw-black;
+  }
+}

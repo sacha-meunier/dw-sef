@@ -1,6 +1,6 @@
 <?php
 
-register_post_type('actu', [
+register_post_type('news', [
 'label' => 'Articles',
 'description' => 'Les actus du SEF',
 'public' => true,

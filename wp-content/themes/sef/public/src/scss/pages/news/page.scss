@@ -1,0 +1,23 @@
+@import "../../config/paddings";
+
+.news {
+  @include padding-sides();
+  @include margin-vertical();
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+@media (min-width: 760px) {
+  .news {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 920px) {
+  .news {
+    gap: 4rem;
+  }
+}
