@@ -26,3 +26,4 @@
 </head>
 
 <body>
+<?= get_template_part('component/main-navigation'); ?>

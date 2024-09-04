@@ -1,0 +1,87 @@
+@import "../config/colors";
+@import "../config/fonts";
+@import "../config/elements";
+@import "../config/animations";
+@import "../config/spacings";
+@import "../config/paddings";
+
+.nav-toggler {
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    position: fixed;
+    padding: 0;
+    z-index: 9999;
+    top: $padding-side-xs;
+    right: $padding-side-xs;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border-radius: $radius-xxl;
+    border: none;
+    background: $clr-black;
+  }
+
+  &__line {
+    width: 10px;
+    height: 2px;
+
+    border-radius: $radius-xxl;
+    background: $clr-white;
+    transition: $ad-500;
+  }
+
+  &__nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+
+    background: $clr-white;
+    transition: $ad-500;
+    transform: translateX(100%);
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $space-2xl;
+  }
+
+  &__link {
+    @include h3();
+    color: $clr-black;
+    font-weight: $fw-bold;
+    text-decoration: none;
+
+  }
+
+  &__input:checked ~ &__nav {
+    transform: translateX(0%);
+  }
+
+  &__input:checked ~ &__label > &__line {
+    transform: translate3d(0px, 3px, 0px) rotateZ(-45deg);
+    transform-style: preserve-3d;
+  }
+
+  &__input:checked ~ &__label > &__line + &__line {
+    transform: translate3d(0px, -3px, 0px) rotateZ(45deg);
+    transform-style: preserve-3d;
+  }
+}

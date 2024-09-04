@@ -1,0 +1,34 @@
+.accordion {
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s linear;
+  }
+
+  &__input:checked ~ &__label ~ &__content {
+    max-height: 272px;
+  }
+}
+
+@media (min-width: 920px) {
+  .accordion {
+
+    &__content {
+      max-height: none;
+      overflow: unset;
+    }
+
+    &__input:checked ~ &__label ~ &__content {
+      max-height: unset;
+    }
+  }
+}

@@ -16,7 +16,12 @@
 // **********************************************************
 // Load components
 // **********************************************************
+@import "components/base";
 @import "components/button";
+@import "components/header";
+@import "components/footer";
+@import "components/toggler";
+@import "components/accordion";
 
 
 // **********************************************************
@@ -49,6 +54,12 @@
 @import "pages/contact/info";
 @import "pages/contact/form";
 @import "pages/contact/aside";
+
+// Support page
+@import "pages/support/page";
+@import "pages/support/info";
+@import "pages/support/donation";
+@import "pages/support/volunteering";
 
 
 
