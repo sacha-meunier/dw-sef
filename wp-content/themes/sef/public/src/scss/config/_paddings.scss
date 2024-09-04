@@ -36,25 +36,25 @@ $max-width: 1280px;
 
 // Adds margin top and bottom based on screen width.
 // **********************************************************
-// - @include margin-vertical()
+// - @include padding-vertical()
 // **********************************************************
-@mixin margin-vertical {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+@mixin padding-vertical {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 
   @media (min-width: 760px) {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   @media (min-width: 920px) {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   @media (min-width: 1440px) {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
 

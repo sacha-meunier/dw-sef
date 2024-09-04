@@ -2,7 +2,7 @@
 
 .contact {
   @include padding-sides();
-  @include margin-vertical();
+  @include padding-vertical();
 
   display: flex;
   flex-direction: column;
