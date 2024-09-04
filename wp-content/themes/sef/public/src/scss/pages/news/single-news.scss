@@ -1,0 +1,73 @@
+@import "../../config/paddings";
+@import "../../config/fonts";
+@import "../../config/colors";
+
+.single {
+  @include padding-sides();
+  @include padding-vertical();
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title {
+    @include h2();
+    font-weight: $fw-bold;
+  }
+
+  &__date {
+    @include paragraph-small();
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__copy {
+    @include paragraph();
+  }
+}
+
+  .news {
+    padding-top: 4rem;
+    gap: 2rem;
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }
+
+.news__cta--desktop {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .single {
+    gap: 2rem;
+  }
+  .news__cta--desktop {
+    display: block;
+  }
+
+  .news__cta--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 920px) {
+  .single {
+    gap: 3rem;
+  }
+}
