@@ -14,7 +14,20 @@
   border-radius: $radius-xl;
   color: $clr-white;
   background-color: $clr-black;
-
+  white-space: nowrap;
   padding: 10px 20px;
   flex: 0;
+}
+
+.button--secondary {
+  @include h3();
+  color: $clr-acc-blue;
+  background-color: hsla(213, 22%, 90%, 0%);
+  transition: background-color $ad-250;
+}
+
+.button--secondary:hover,
+.button--secondary:focus,
+{
+  background-color: $clr-bg-blue;
 }
