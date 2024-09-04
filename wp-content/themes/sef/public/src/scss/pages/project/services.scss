@@ -1,0 +1,99 @@
+@import "../../config/fonts";
+@import "../../config/colors";
+@import "../../config/elements";
+
+.sef {
+
+  .services {
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: stretch;
+    gap: 2rem;
+
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+    }
+
+    &__wrapper {
+      background-color: $clr-vanilla;
+      border-radius: $radius-xl;
+      height: 250px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+      padding: 1rem;
+
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+      //align-items: stretch;
+
+      border-radius: $radius-xl;
+      padding: 20px;
+
+      &--green {
+        background-color: $clr-bg-green;
+      }
+
+      &--orange {
+        background-color: $clr-bg-orange;
+      }
+
+      &--pink {
+        background-color: $clr-bg-pink;
+      }
+
+      &--blue {
+        background-color: $clr-bg-blue;
+      }
+
+      &--red {
+        background-color: $clr-bg-red;
+      }
+
+      &--vanilla {
+        background-color: $clr-vanilla;
+      }
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+      @include h1();
+      font-weight: $fw-bold;
+    }
+
+    &__copy {
+      @include paragraph();
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .sef {
+
+    .services {
+      gap: 4rem;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../config/fonts";
+@import "../../config/colors";
+@import "../../config/elements";
+
+.sef {
+
+  .info {
+    max-height: 500px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: stretch;
+    gap: 2rem;
+
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+      @include h1();
+      font-weight: $fw-bold;
+    }
+
+    &__copy {
+      @include paragraph();
+    }
+
+    &__wrapper {
+      background-color: $clr-vanilla;
+      border-radius: $radius-xl;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .sef {
+
+    .info {
+      gap: 4rem;
+    }
+  }
+}
