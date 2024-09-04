@@ -1,0 +1,147 @@
+@import "../../config/colors";
+@import "../../config/fonts";
+@import "../../config/elements";
+@import "../../config/animations";
+@import "../../config/spacings";
+@import "../../config/paddings";
+
+.support {
+
+  &__container > article + article {
+    margin-block-start: 2rem;
+  }
+
+  &__subtitle {
+    @include h2();
+    font-weight: $fw-bold;
+    margin-bottom: 1em;
+  }
+
+  &__card {
+    @include padding-card();
+    @include gap-card();
+
+    max-height: 500px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    border-radius: $radius-xl;
+    background-color: $clr-bg-pink;
+
+    &--green {
+      background-color: $clr-bg-green;
+    }
+
+    &--orange {
+      background-color: $clr-bg-orange;
+    }
+
+    &--pink {
+      background-color: $clr-bg-pink;
+    }
+
+    &--blue {
+      background-color: $clr-bg-blue;
+    }
+
+    &--red {
+      background-color: $clr-bg-red;
+    }
+
+    &--vanilla {
+      background-color: $clr-vanilla;
+    }
+  }
+
+  &__card > * {
+    flex-grow: 1;
+    flex-basis: calc((30rem - 100%) * 999);
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $padding-side-xs;
+  }
+
+  .card__title {
+    @include h3();
+    font-weight: $fw-bold;
+  }
+
+  .card__description {
+    @include paragraph-small();
+  }
+
+  .card__image-container {
+    display: flex;
+    flex-grow: 1;
+    min-height: 200px;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: $clr-vanilla;
+
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: $radius-xl;
+  }
+}
+
+@media (min-width: 560px) {
+  .support {
+
+    .card__image-container {
+      min-height: 250px;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .support {
+
+    &__subtitle {
+      margin-bottom: 2rem;
+    }
+
+    &__container > article + article {
+      margin-block-start: 4rem;
+    }
+
+    .card__content {
+      gap: $padding-side-xs;
+    }
+
+    .card__image-container {
+      min-height: 300px;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .support {
+
+    &__subtitle {
+      margin-bottom: 2rem;
+    }
+
+    &__container > article + article {
+      margin-block-start: 3rem;
+    }
+
+    .card__content {
+      gap: $padding-side-xs;
+    }
+
+    .card__image-container {
+      min-height: 350px;
+    }
+  }
+}
