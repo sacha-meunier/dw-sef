@@ -12,9 +12,7 @@
             ;
         ?>
 
-            <article
-                    <?= $card_is_reverse ?>
-                    class="<?= $article_classes; ?>">
+            <article class="<?= $article_classes; ?>">
 
                 <div class="card__content">
                     <div class="card__header">
